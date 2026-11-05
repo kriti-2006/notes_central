@@ -1,0 +1,236 @@
+/* ==========================================================================
+   Notes Central 2.0 — sign in / sign up
+   Builds on the tokens and components in style.css.
+   ========================================================================== */
+
+.auth-page {
+  padding-block: clamp(1.5rem, 0.5rem + 5vw, 5rem);
+}
+
+.auth-layout {
+  display: grid;
+  gap: var(--space-7);
+  align-items: center;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 30rem;
+  margin-inline: auto;
+  padding: clamp(1.25rem, 0.6rem + 3vw, 2.75rem);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-xl);
+  background: var(--surface);
+  box-shadow: var(--shadow-lg);
+}
+
+.auth-card h1 {
+  font-family: var(--font-display);
+  font-size: var(--step-4);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1.02;
+}
+
+.auth-card-intro {
+  margin: var(--space-3) 0 var(--space-5);
+  color: var(--text-2);
+}
+
+.auth-card noscript .form-status {
+  display: block;
+  margin-bottom: var(--space-4);
+}
+
+/* Segmented tabs */
+.auth-tabs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-1);
+  margin-bottom: var(--space-5);
+  padding: var(--space-1);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-pill);
+  background: var(--surface-2);
+}
+
+.auth-tab {
+  min-height: var(--tap);
+  padding: 0 var(--space-3);
+  border: 0;
+  border-radius: var(--radius-pill);
+  background: transparent;
+  color: var(--text-2);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  transition: background-color var(--t-fast), color var(--t-fast), box-shadow var(--t-base);
+}
+
+.auth-tab:hover {
+  color: var(--text);
+}
+
+/* Selected: raised surface + bold text + underline, not colour alone */
+.auth-tab[aria-selected="true"] {
+  background: var(--surface);
+  color: var(--text);
+  font-weight: 600;
+  box-shadow: var(--shadow-sm), inset 0 -3px 0 var(--accent);
+}
+
+.auth-panel .form {
+  gap: var(--space-4);
+}
+
+.password-field {
+  position: relative;
+}
+
+.password-field .input {
+  padding-right: 5rem;
+}
+
+.password-toggle {
+  position: absolute;
+  top: 50%;
+  right: var(--space-1);
+  min-width: var(--tap);
+  min-height: 2.5rem;
+  padding: 0 var(--space-3);
+  border: 0;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--accent-ink);
+  font-size: 0.875rem;
+  font-weight: 600;
+  transform: translateY(-50%);
+}
+
+.password-toggle:hover {
+  background: var(--surface-2);
+}
+
+.auth-switch {
+  margin-top: var(--space-5);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--line);
+  color: var(--text-2);
+  font-size: 0.9375rem;
+  text-align: center;
+}
+
+.link-button {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--tap);
+  padding: 0 var(--space-1);
+  border: 0;
+  background: none;
+  color: var(--text);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.25em;
+}
+
+/* Side panel (large screens only) */
+.auth-aside {
+  display: none;
+}
+
+@media (min-width: 64em) {
+  .auth-layout {
+    grid-template-columns: minmax(0, 30rem) minmax(0, 1fr);
+    gap: var(--space-8);
+  }
+
+  .auth-card {
+    margin: 0;
+  }
+
+  .auth-aside {
+    display: block;
+  }
+}
+
+.auth-aside h2 {
+  margin-top: var(--space-6);
+  font-size: var(--step-4);
+  max-width: 14ch;
+}
+
+.auth-aside-list {
+  display: grid;
+  gap: var(--space-3);
+  margin-top: var(--space-5);
+  padding: 0;
+  list-style: none;
+  color: var(--text-2);
+  font-size: var(--step-1);
+}
+
+.auth-aside-list li {
+  display: flex;
+  gap: var(--space-3);
+}
+
+.auth-aside-list li::before {
+  content: "";
+  flex-shrink: 0;
+  width: 0.55rem;
+  height: 0.55rem;
+  margin-top: 0.6em;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+/* Fanned index cards */
+.auth-aside-art {
+  position: relative;
+  height: 12rem;
+  max-width: 30rem;
+}
+
+.aa-card {
+  position: absolute;
+  top: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 42%;
+  max-width: 12.5rem;
+  height: 9rem;
+  padding: var(--space-4) var(--space-4) var(--space-4) calc(var(--space-4) + 0.6rem);
+  border: 1px solid var(--line);
+  border-radius: 6px var(--radius-md) var(--radius-md) 6px;
+  background-color: var(--surface);
+  background-image: repeating-linear-gradient(180deg, transparent 0 1.3rem, var(--paper-rule) 1.3rem calc(1.3rem + 1px));
+  box-shadow: var(--shadow-md);
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  line-height: 1.1;
+}
+
+.aa-card::before {
+  content: "";
+  position: absolute;
+  inset: -1px auto -1px -1px;
+  width: 0.6rem;
+  border-radius: 6px 0 0 6px;
+  background: var(--h);
+}
+
+.aa-card b {
+  align-self: flex-start;
+  padding: 0.1rem 0.5rem;
+  border-radius: var(--radius-sm);
+  background: var(--h-soft);
+  color: var(--h-ink);
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.aa-card:nth-child(1) { left: 2%; rotate: -8deg; }
+.aa-card:nth-child(2) { left: 29%; top: 0; rotate: 2deg; z-index: 1; }
+.aa-card:nth-child(3) { left: 56%; top: 1.5rem; rotate: 9deg; }

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+{{HEAD}}
+    <title>Explore the library — Notes Central</title>
+    <meta name="description" content="Search and filter {{N_RESOURCES}} B.Tech study resources across {{N_SUBJECTS}} subjects by title, subject, topic, type and category.">
+  </head>
+
+  <body data-page="explore">
+{{HEADER}}
+
+    <main id="main" tabindex="-1">
+      <div class="page-intro page-intro--compact">
+        <div class="container">
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <ol>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="notess.html" aria-current="page">Explore</a></li>
+            </ol>
+          </nav>
+          <h1>Explore the library</h1>
+          <p class="lede">Search {{N_RESOURCES}} resources across {{N_SUBJECTS}} subjects by title, subject, topic or short form, then narrow things down with filters.</p>
+        </div>
+      </div>
+
+      <div class="explorer-bar">
+        <div class="container explorer-bar-inner">
+          <form class="search-box" id="explore-search-form" role="search">
+            <label class="sr-only" for="explore-q">Search resources</label>
+            {{ICON:search}}
+            <input class="input" id="explore-q" name="q" type="search" placeholder="Search titles, subjects or topics…" autocomplete="off" aria-describedby="results-status">
+            <button class="icon-btn clear-btn" type="button" id="explore-clear-q" aria-label="Clear search" hidden>{{ICON:close}}</button>
+          </form>
+          <div class="explorer-controls">
+            <button class="btn btn-ghost btn-sm filters-toggle" type="button" id="filters-toggle" aria-expanded="false" aria-controls="filters">
+              {{ICON:filter}} Filters <span class="filter-count" id="filters-count" hidden></span>
+            </button>
+            <div class="sort">
+              <label for="explore-sort">Sort by</label>
+              <select class="input" id="explore-sort">
+                <option value="recommended">Best match</option>
+                <option value="subject">Subject</option>
+                <option value="title-asc">Title A–Z</option>
+                <option value="title-desc">Title Z–A</option>
+                <option value="short-first">Quickest read first</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container explorer-layout">
+        <aside class="filters" id="filters" aria-labelledby="filters-title">
+          <div class="filters-head">
+            <h2 id="filters-title">Filters</h2>
+            <button class="btn btn-quiet btn-sm" type="button" id="filters-clear" hidden>Clear all</button>
+          </div>
+          <details class="accordion" open>
+            <summary>Subject</summary>
+            <fieldset class="accordion-body"><legend class="sr-only">Subject</legend><div id="facet-subject"></div></fieldset>
+          </details>
+          <details class="accordion" open>
+            <summary>Type</summary>
+            <fieldset class="accordion-body"><legend class="sr-only">Type</legend><div id="facet-type"></div></fieldset>
+          </details>
+          <details class="accordion" open>
+            <summary>Category</summary>
+            <fieldset class="accordion-body"><legend class="sr-only">Category</legend><div id="facet-category"></div></fieldset>
+          </details>
+          <div class="accordion-body saved-filter">
+            <label class="check" for="facet-saved">
+              <input type="checkbox" id="facet-saved" name="saved">
+              {{ICON:bookmark}}<span>Saved only</span><span class="count"><span class="sr-only">(</span><span id="facet-saved-count">0</span><span class="sr-only"> saved)</span></span>
+            </label>
+          </div>
+        </aside>
+
+        <section class="results" aria-labelledby="results-title">
+          <div class="results-head">
+            <h2 class="sr-only" id="results-title">Results</h2>
+            <p class="results-status" id="results-status" role="status">Loading resources…</p>
+            <button class="btn btn-quiet btn-sm" type="button" id="results-reset" hidden>Reset search and filters</button>
+          </div>
+          <div class="active-filters" id="active-filters" role="group" aria-label="Active filters"></div>
+          <ul class="resource-list list-reset" id="results" aria-labelledby="results-title"></ul>
+          <noscript><p class="muted">The explorer needs JavaScript. You can still <a href="subjects.html">browse subjects</a>.</p></noscript>
+        </section>
+      </div>
+    </main>
+
+{{FOOTER}}
+
+    <script type="module" src="js/script.js"></script>
+  </body>
+</html>

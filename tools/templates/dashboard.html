@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+{{HEAD}}
+    <title>Your library — Notes Central</title>
+    <meta name="description" content="Your Notes Central library: continue reading, saved resources and favourite subjects.">
+  </head>
+
+  <body data-page="library">
+{{HEADER}}
+
+    <main id="main" tabindex="-1">
+      <div class="page-intro">
+        <div class="container library-intro">
+          <div>
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+              <ol>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="dashboard.html" aria-current="page">Library</a></li>
+              </ol>
+            </nav>
+            <h1>Your library</h1>
+            <p class="lede" id="library-greeting">Everything you save and read, in one place.</p>
+          </div>
+          <div class="sync-note" id="sync-note" role="status">{{ICON:device}}<p>Saved on this device. <a href="login.html">Sign in</a> to keep your library in sync across devices.</p></div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="container library-stack">
+          <section class="library-section" aria-labelledby="recent-title">
+            <div class="library-section-head">
+              <div>
+                <h2 id="recent-title" tabindex="-1">Continue reading</h2>
+                <p id="recent-count"></p>
+              </div>
+              <button class="btn btn-quiet btn-sm" type="button" id="clear-recent" hidden>{{ICON:history}} Clear history</button>
+            </div>
+            <div id="recent-list"></div>
+          </section>
+
+          <section class="library-section" aria-labelledby="saved-title">
+            <div class="library-section-head">
+              <div>
+                <h2 id="saved-title" tabindex="-1">Saved resources</h2>
+                <p id="saved-count"></p>
+              </div>
+            </div>
+            <div id="saved-list"></div>
+          </section>
+
+          <section class="library-section" aria-labelledby="favourite-title">
+            <div class="library-section-head">
+              <div>
+                <h2 id="favourite-title" tabindex="-1">Favourite subjects</h2>
+                <p id="favourite-count"></p>
+              </div>
+            </div>
+            <div id="favourite-list"></div>
+          </section>
+
+          <section class="library-section" aria-labelledby="shortcuts-title">
+            <div class="library-section-head"><h2 id="shortcuts-title">Shortcuts</h2></div>
+            <ul class="shortcuts list-reset">
+              <li><a class="shortcut" href="notess.html">{{ICON:search}} Explore resources</a></li>
+              <li><a class="shortcut" href="subjects.html">{{ICON:grid}} Browse subjects</a></li>
+              <li><button class="shortcut" type="button" data-open-palette aria-haspopup="dialog">{{ICON:keyboard}} Quick find</button></li>
+              <li><a class="shortcut" href="contact.html">{{ICON:mail}} Request a subject</a></li>
+              <li><button class="shortcut" type="button" data-theme-toggle>{{ICON:contrast}}<span data-theme-label>Switch to dark theme</span></button></li>
+            </ul>
+          </section>
+          <noscript><p class="muted">Your library needs JavaScript, because it is stored in your browser.</p></noscript>
+        </div>
+      </div>
+    </main>
+
+{{FOOTER}}
+
+    <script type="module" src="js/script.js"></script>
+  </body>
+</html>

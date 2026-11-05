@@ -1,0 +1,70 @@
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html">
+          {{MARK}}
+          <span class="brand-word">Notes <i>Central</i></span>
+        </a>
+
+        <nav class="primary-nav" aria-label="Main">
+          <ul class="nav-list list-reset">
+            <li><a class="nav-link" href="index.html"{{CUR_home}}>Home</a></li>
+            <li><a class="nav-link" href="notess.html"{{CUR_explore}}>Explore</a></li>
+            <li><a class="nav-link" href="subjects.html"{{CUR_subjects}}>Subjects</a></li>
+            <li><a class="nav-link" href="dashboard.html"{{CUR_library}}>Library</a></li>
+            <li><a class="nav-link" href="about.html"{{CUR_about}}>About</a></li>
+            <li><a class="nav-link" href="contact.html"{{CUR_contact}}>Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-actions">
+          <button class="find-btn" type="button" data-open-palette aria-haspopup="dialog" aria-label="Quick find" aria-keyshortcuts="/ Control+K Meta+K">
+            {{ICON:search}}<span class="find-label">Quick find</span><kbd>/</kbd>
+          </button>
+          <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark theme">
+            {{ICON:moon}}{{ICON:sun}}
+          </button>
+          <div class="account" data-account>
+            <a class="btn btn-primary btn-sm" href="login.html"{{CUR_login}}>Sign in</a>
+          </div>
+          <button class="icon-btn nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-sheet" aria-label="Menu">
+            {{ICON:menu}}{{ICON:close-x}}
+          </button>
+        </div>
+      </div>
+
+      <div class="mobile-sheet" id="mobile-sheet">
+        <nav aria-label="Main menu">
+          <ul class="mobile-nav-list list-reset">
+            <li><a href="index.html"{{CUR_home}}>Home</a></li>
+            <li><a href="notess.html"{{CUR_explore}}>Explore</a></li>
+            <li><a href="subjects.html"{{CUR_subjects}}>Subjects</a></li>
+            <li><a href="dashboard.html"{{CUR_library}}>Library</a></li>
+            <li><a href="about.html"{{CUR_about}}>About</a></li>
+            <li><a href="contact.html"{{CUR_contact}}>Contact</a></li>
+          </ul>
+        </nav>
+        <div class="mobile-sheet-actions">
+          <button class="btn btn-ghost btn-lg btn-block" type="button" data-theme-toggle>{{ICON:moon}}{{ICON:sun}}<span data-theme-label>Switch to dark theme</span></button>
+          <div class="mobile-account" data-account-mobile>
+            <a class="btn btn-primary btn-lg btn-block" href="login.html"{{CUR_login}}>Sign in or create an account</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <dialog class="palette" id="quick-find" aria-labelledby="qf-title">
+      <h2 class="sr-only" id="qf-title">Quick find</h2>
+      <div class="palette-search">
+        {{ICON:search}}
+        <label class="sr-only" for="qf-input">Search subjects, resources and actions</label>
+        <input id="qf-input" type="text" role="combobox" aria-expanded="true" aria-controls="qf-list" aria-autocomplete="list" autocomplete="off" spellcheck="false" placeholder="Search subjects, notes and actions…">
+        <button class="icon-btn" type="button" data-close-palette aria-label="Close quick find">{{ICON:close}}</button>
+      </div>
+      <div class="palette-results" id="qf-list" role="listbox" aria-label="Results"></div>
+      <p class="sr-only" id="qf-status" role="status"></p>
+      <div class="palette-foot" aria-hidden="true">
+        <span><kbd>↑</kbd><kbd>↓</kbd> move</span><span><kbd>Enter</kbd> open</span><span><kbd>Esc</kbd> close</span>
+      </div>
+    </dialog>

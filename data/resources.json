@@ -1,0 +1,459 @@
+{
+  "years": [
+    {
+      "year": 1,
+      "label": "1st year",
+      "status": "coming-soon"
+    },
+    {
+      "year": 2,
+      "label": "2nd year",
+      "status": "available"
+    },
+    {
+      "year": 3,
+      "label": "3rd year",
+      "status": "coming-soon"
+    }
+  ],
+  "subjects": [
+    {
+      "id": "data-structure",
+      "title": "Data Structure",
+      "short": "DS",
+      "category": "Core CS",
+      "hue": "teal",
+      "year": 2,
+      "description": "Arrays, linked lists, stacks, queues, trees and graphs, and the algorithms that work on them.",
+      "keywords": "ds dsa algorithms"
+    },
+    {
+      "id": "technical-communication",
+      "title": "Technical Communication",
+      "short": "TC",
+      "category": "Humanities",
+      "hue": "rose",
+      "year": 2,
+      "description": "Writing, presentation and professional communication skills for engineers.",
+      "keywords": "tc english writing"
+    },
+    {
+      "id": "dstl",
+      "title": "DSTL",
+      "short": "DSTL",
+      "category": "Mathematics",
+      "hue": "violet",
+      "year": 2,
+      "description": "Discrete Structures & Theory of Logic: sets, relations, functions and logic.",
+      "keywords": "discrete structures theory of logic discrete mathematics"
+    },
+    {
+      "id": "python",
+      "title": "Python",
+      "short": "PY",
+      "category": "Programming",
+      "hue": "blue",
+      "year": 2,
+      "description": "Python programming fundamentals: data types, control flow, functions, files and modules.",
+      "keywords": "python programming coding"
+    },
+    {
+      "id": "laser",
+      "title": "Laser",
+      "short": "LS",
+      "category": "Science",
+      "hue": "red",
+      "year": 2,
+      "description": "Principles of lasers, types of laser systems and their engineering applications.",
+      "keywords": "laser physics optics"
+    },
+    {
+      "id": "operating-system",
+      "title": "Operating System",
+      "short": "OS",
+      "category": "Core CS",
+      "hue": "green",
+      "year": 2,
+      "description": "Processes, CPU scheduling, memory management, file systems and deadlocks.",
+      "keywords": "os operating systems"
+    },
+    {
+      "id": "coa",
+      "title": "Computer Organisation and Architecture",
+      "short": "COA",
+      "category": "Core CS",
+      "hue": "orange",
+      "year": 2,
+      "description": "How a computer works inside: CPU design, instruction sets, memory hierarchy and I/O.",
+      "keywords": "coa computer organization architecture"
+    },
+    {
+      "id": "mathematics-3",
+      "title": "Mathematics-3",
+      "short": "M3",
+      "category": "Mathematics",
+      "hue": "indigo",
+      "year": 2,
+      "description": "Advanced engineering mathematics topics for second-year students.",
+      "keywords": "maths math mathematics 3 m3"
+    },
+    {
+      "id": "universal-human-values",
+      "title": "Universal Human Values",
+      "short": "UHV",
+      "category": "Humanities",
+      "hue": "olive",
+      "year": 2,
+      "description": "Self-exploration, harmony in family, society and nature, and professional ethics.",
+      "keywords": "uhv ethics values"
+    }
+  ],
+  "resources": [
+    {
+      "id": "ds-complexity-arrays-linked-lists",
+      "subject": "data-structure",
+      "title": "Complexity, Arrays & Linked Lists",
+      "type": "Notes",
+      "topics": [
+        "big-o",
+        "arrays",
+        "linked list"
+      ],
+      "summary": "Big-O notation, how arrays are stored, and singly, doubly and circular linked lists compared.",
+      "file": "notes/ds-complexity-arrays-linked-lists.md",
+      "minutes": 2,
+      "added": "2026-11-05",
+      "featured": true
+    },
+    {
+      "id": "ds-stacks-queues",
+      "subject": "data-structure",
+      "title": "Stacks & Queues",
+      "type": "Notes",
+      "topics": [
+        "stack",
+        "queue",
+        "postfix",
+        "circular queue"
+      ],
+      "summary": "LIFO and FIFO structures, postfix evaluation, circular queues, deques and priority queues.",
+      "file": "notes/ds-stacks-queues.md",
+      "minutes": 1,
+      "added": "2026-11-05",
+      "featured": false
+    },
+    {
+      "id": "ds-trees-graphs-revision",
+      "subject": "data-structure",
+      "title": "Trees & Graphs Revision Sheet",
+      "type": "Revision sheet",
+      "topics": [
+        "binary tree",
+        "bst",
+        "heap",
+        "bfs",
+        "dfs"
+      ],
+      "summary": "Traversals, BSTs, heaps, graph representations, BFS, DFS and key graph algorithms at a glance.",
+      "file": "notes/ds-trees-graphs-revision.md",
+      "minutes": 2,
+      "added": "2026-11-05",
+      "featured": false
+    },
+    {
+      "id": "tc-process-of-communication",
+      "subject": "technical-communication",
+      "title": "The Communication Process & Barriers",
+      "type": "Notes",
+      "topics": [
+        "communication process",
+        "barriers",
+        "7 cs"
+      ],
+      "summary": "The elements of the communication cycle, levels of communication, barriers and the 7 Cs.",
+      "file": "notes/tc-process-of-communication.md",
+      "minutes": 1,
+      "added": "2026-11-05",
+      "featured": false
+    },
+    {
+      "id": "tc-technical-writing",
+      "subject": "technical-communication",
+      "title": "Technical Writing: Reports, Letters & Emails",
+      "type": "Notes",
+      "topics": [
+        "report",
+        "letter",
+        "email",
+        "resume"
+      ],
+      "summary": "Features of technical writing, report structure, formal letters, professional emails and resumes.",
+      "file": "notes/tc-technical-writing.md",
+      "minutes": 1,
+      "added": "2026-11-05",
+      "featured": false
+    },
+    {
+      "id": "dstl-sets-relations-functions",
+      "subject": "dstl",
+      "title": "Sets, Relations & Functions",
+      "type": "Notes",
+      "topics": [
+        "sets",
+        "relations",
+        "functions",
+        "equivalence"
+      ],
+      "summary": "Set operations, the properties of relations, equivalence relations, posets and types of functions.",
+      "file": "notes/dstl-sets-relations-functions.md",
+      "minutes": 1,
+      "added": "2026-11-05",
+      "featured": false
+    },
+    {
+      "id": "dstl-propositional-logic",
+      "subject": "dstl",
+      "title": "Propositional & Predicate Logic",
+      "type": "Notes",
+      "topics": [
+        "logic",
+        "tautology",
+        "inference",
+        "quantifiers"
+      ],
+      "summary": "Connectives, equivalences, normal forms, rules of inference and quantifiers.",
+      "file": "notes/dstl-propositional-logic.md",
+      "minutes": 1,
+      "added": "2026-11-05",
+      "featured": true
+    },
+    {
+      "id": "dstl-practice-set",
+      "subject": "dstl",
+      "title": "Sets & Logic Practice Set",
+      "type": "Practice set",
+      "topics": [
+        "practice",
+        "sets",
+        "logic"
+      ],
+      "summary": "Seven exam-style questions on sets, relations, functions and logic, with worked answers.",
+      "file": "notes/dstl-practice-set.md",
+      "minutes": 2,
+      "added": "2026-11-05",
+      "featured": false
+    },
+    {
+      "id": "python-basics",
+      "subject": "python",
+      "title": "Python Basics: Types, Operators & Control Flow",
+      "type": "Notes",
+      "topics": [
+        "data types",
+        "operators",
+        "loops",
+        "strings"
+      ],
+      "summary": "Variables, built-in types, operators, input and output, conditionals, loops and strings.",
+      "file": "notes/python-basics.md",
+      "minutes": 1,
+      "added": "2026-11-05",
+      "featured": true
+    },
+    {
+      "id": "python-functions-files",
+      "subject": "python",
+      "title": "Functions, Modules & File Handling",
+      "type": "Notes",
+      "topics": [
+        "functions",
+        "recursion",
+        "files",
+        "exceptions"
+      ],
+      "summary": "Arguments, scope, lambdas, recursion, modules, file modes and exception handling.",
+      "file": "notes/python-functions-files.md",
+      "minutes": 1,
+      "added": "2026-11-05",
+      "featured": false
+    },
+    {
+      "id": "python-practice-set",
+      "subject": "python",
+      "title": "Python Practice Set",
+      "type": "Practice set",
+      "topics": [
+        "practice",
+        "output questions"
+      ],
+      "summary": "Output prediction and short coding questions with answers.",
+      "file": "notes/python-practice-set.md",
+      "minutes": 1,
+      "added": "2026-11-05",
+      "featured": false
+    },
+    {
+      "id": "laser-fundamentals",
+      "subject": "laser",
+      "title": "Laser Fundamentals",
+      "type": "Notes",
+      "topics": [
+        "stimulated emission",
+        "population inversion",
+        "einstein coefficients"
+      ],
+      "summary": "Properties of laser light, absorption and emission, population inversion and laser components.",
+      "file": "notes/laser-fundamentals.md",
+      "minutes": 2,
+      "added": "2026-11-05",
+      "featured": false
+    },
+    {
+      "id": "laser-types-applications",
+      "subject": "laser",
+      "title": "Types of Lasers & Applications",
+      "type": "Revision sheet",
+      "topics": [
+        "ruby laser",
+        "he-ne laser",
+        "semiconductor laser"
+      ],
+      "summary": "Ruby, He-Ne and semiconductor lasers compared, plus their applications.",
+      "file": "notes/laser-types-applications.md",
+      "minutes": 1,
+      "added": "2026-11-05",
+      "featured": false
+    },
+    {
+      "id": "os-processes-scheduling",
+      "subject": "operating-system",
+      "title": "Processes & CPU Scheduling",
+      "type": "Notes",
+      "topics": [
+        "process",
+        "pcb",
+        "scheduling",
+        "round robin"
+      ],
+      "summary": "Process states, PCBs, threads, scheduling criteria and FCFS, SJF, priority and round robin.",
+      "file": "notes/os-processes-scheduling.md",
+      "minutes": 2,
+      "added": "2026-11-05",
+      "featured": true
+    },
+    {
+      "id": "os-memory-deadlocks",
+      "subject": "operating-system",
+      "title": "Memory Management & Deadlocks",
+      "type": "Notes",
+      "topics": [
+        "paging",
+        "virtual memory",
+        "deadlock",
+        "banker's algorithm"
+      ],
+      "summary": "Allocation strategies, paging, page replacement, thrashing and deadlock handling.",
+      "file": "notes/os-memory-deadlocks.md",
+      "minutes": 2,
+      "added": "2026-11-05",
+      "featured": false
+    },
+    {
+      "id": "coa-data-representation-cpu",
+      "subject": "coa",
+      "title": "Data Representation & CPU Organisation",
+      "type": "Notes",
+      "topics": [
+        "number systems",
+        "2's complement",
+        "registers",
+        "addressing modes"
+      ],
+      "summary": "Number systems, signed and floating-point numbers, registers, the instruction cycle and addressing modes.",
+      "file": "notes/coa-data-representation-cpu.md",
+      "minutes": 2,
+      "added": "2026-11-05",
+      "featured": false
+    },
+    {
+      "id": "coa-memory-hierarchy",
+      "subject": "coa",
+      "title": "Memory Hierarchy & Cache",
+      "type": "Notes",
+      "topics": [
+        "cache",
+        "mapping",
+        "locality"
+      ],
+      "summary": "Locality of reference, cache performance, mapping techniques and write policies.",
+      "file": "notes/coa-memory-hierarchy.md",
+      "minutes": 2,
+      "added": "2026-11-05",
+      "featured": false
+    },
+    {
+      "id": "m3-fourier-series",
+      "subject": "mathematics-3",
+      "title": "Fourier Series",
+      "type": "Notes",
+      "topics": [
+        "fourier series",
+        "euler's formulas",
+        "half-range"
+      ],
+      "summary": "Euler's formulas, Dirichlet's conditions, even and odd functions, change of interval and half-range series.",
+      "file": "notes/m3-fourier-series.md",
+      "minutes": 2,
+      "added": "2026-11-05",
+      "featured": false
+    },
+    {
+      "id": "m3-laplace-transform-revision",
+      "subject": "mathematics-3",
+      "title": "Laplace Transform Revision Sheet",
+      "type": "Revision sheet",
+      "topics": [
+        "laplace transform",
+        "inverse laplace",
+        "differential equations"
+      ],
+      "summary": "Standard transforms, key properties, inverses and solving ODEs on one page.",
+      "file": "notes/m3-laplace-transform-revision.md",
+      "minutes": 1,
+      "added": "2026-11-05",
+      "featured": false
+    },
+    {
+      "id": "uhv-self-exploration",
+      "subject": "universal-human-values",
+      "title": "Self-Exploration & Human Aspirations",
+      "type": "Notes",
+      "topics": [
+        "self-exploration",
+        "happiness",
+        "prosperity"
+      ],
+      "summary": "Value education, natural acceptance, basic human aspirations and the self and body.",
+      "file": "notes/uhv-self-exploration.md",
+      "minutes": 2,
+      "added": "2026-11-05",
+      "featured": false
+    },
+    {
+      "id": "uhv-harmony-family-society-nature",
+      "subject": "universal-human-values",
+      "title": "Harmony in Family, Society & Nature",
+      "type": "Notes",
+      "topics": [
+        "harmony",
+        "relationships",
+        "four orders"
+      ],
+      "summary": "The nine feelings, harmony in society and the four orders of nature.",
+      "file": "notes/uhv-harmony-family-society-nature.md",
+      "minutes": 2,
+      "added": "2026-11-05",
+      "featured": false
+    }
+  ]
+}

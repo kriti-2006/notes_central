@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#f6f3ec" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0e1014" media="(prefers-color-scheme: dark)">
+    <!-- Base URL of the Node API (server.js). Change it when deploying the backend. -->
+    <meta name="notes-api-base" content="http://localhost:5000">
+    <script>(function(){var d=document.documentElement,t=null;d.classList.add("js");try{t=JSON.parse(localStorage.getItem("nc:theme"))}catch(e){}if(t!=="light"&&t!=="dark"){t=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"}d.setAttribute("data-theme",t)})();</script>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Inter:wght@400;500;600;700&amp;display=swap">
+    <link rel="stylesheet" href="css/style.css">
+    <title>About — Notes Central</title>
+    <meta name="description" content="Notes Central is an independently developed educational platform created to make academic resources easier to discover, access, and navigate.">
+  </head>
+
+  <body data-page="about">
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html">
+          <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><rect class="bm-cover" x="6" y="3" width="21" height="26" rx="3.5"/><rect class="bm-spine" x="6" y="3" width="5" height="26" rx="2"/><path class="bm-lines" d="M14.5 11h8M14.5 16h8M14.5 21h5"/><path class="bm-hl" d="M13.5 16h10"/></svg>
+          <span class="brand-word">Notes <i>Central</i></span>
+        </a>
+
+        <nav class="primary-nav" aria-label="Main">
+          <ul class="nav-list list-reset">
+            <li><a class="nav-link" href="index.html">Home</a></li>
+            <li><a class="nav-link" href="notess.html">Explore</a></li>
+            <li><a class="nav-link" href="subjects.html">Subjects</a></li>
+            <li><a class="nav-link" href="dashboard.html">Library</a></li>
+            <li><a class="nav-link" href="about.html" aria-current="page">About</a></li>
+            <li><a class="nav-link" href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-actions">
+          <button class="find-btn" type="button" data-open-palette aria-haspopup="dialog" aria-label="Quick find" aria-keyshortcuts="/ Control+K Meta+K">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg><span class="find-label">Quick find</span><kbd>/</kbd>
+          </button>
+          <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark theme">
+            <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg><svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M4.6 4.6l1.4 1.4M18 18l1.4 1.4M2.5 12h2M19.5 12h2M4.6 19.4L6 18M18 6l1.4-1.4"/></svg>
+          </button>
+          <div class="account" data-account>
+            <a class="btn btn-primary btn-sm" href="login.html">Sign in</a>
+          </div>
+          <button class="icon-btn nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-sheet" aria-label="Menu">
+            <svg class="icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6L6 18"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="mobile-sheet" id="mobile-sheet">
+        <nav aria-label="Main menu">
+          <ul class="mobile-nav-list list-reset">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="notess.html">Explore</a></li>
+            <li><a href="subjects.html">Subjects</a></li>
+            <li><a href="dashboard.html">Library</a></li>
+            <li><a href="about.html" aria-current="page">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="mobile-sheet-actions">
+          <button class="btn btn-ghost btn-lg btn-block" type="button" data-theme-toggle><svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg><svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M4.6 4.6l1.4 1.4M18 18l1.4 1.4M2.5 12h2M19.5 12h2M4.6 19.4L6 18M18 6l1.4-1.4"/></svg><span data-theme-label>Switch to dark theme</span></button>
+          <div class="mobile-account" data-account-mobile>
+            <a class="btn btn-primary btn-lg btn-block" href="login.html">Sign in or create an account</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <dialog class="palette" id="quick-find" aria-labelledby="qf-title">
+      <h2 class="sr-only" id="qf-title">Quick find</h2>
+      <div class="palette-search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+        <label class="sr-only" for="qf-input">Search subjects, resources and actions</label>
+        <input id="qf-input" type="text" role="combobox" aria-expanded="true" aria-controls="qf-list" aria-autocomplete="list" autocomplete="off" spellcheck="false" placeholder="Search subjects, notes and actions…">
+        <button class="icon-btn" type="button" data-close-palette aria-label="Close quick find"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+      </div>
+      <div class="palette-results" id="qf-list" role="listbox" aria-label="Results"></div>
+      <p class="sr-only" id="qf-status" role="status"></p>
+      <div class="palette-foot" aria-hidden="true">
+        <span><kbd>↑</kbd><kbd>↓</kbd> move</span><span><kbd>Enter</kbd> open</span><span><kbd>Esc</kbd> close</span>
+      </div>
+    </dialog>
+
+    <main id="main" tabindex="-1">
+      <div class="page-intro">
+        <div class="container">
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <ol>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html" aria-current="page">About</a></li>
+            </ol>
+          </nav>
+          <h1>A better home for what you learn</h1>
+          <p class="lede">Notes Central is an independently developed educational platform created to make academic resources easier to discover, access, and navigate.</p>
+        </div>
+      </div>
+
+      <section class="section" aria-labelledby="vision-title">
+        <div class="container story">
+          <div data-reveal>
+            <span class="eyebrow">Product vision</span>
+            <h2 id="vision-title">Study material should feel like a library, not a scavenger hunt</h2>
+          </div>
+          <div class="story-text" data-reveal="late">
+            <p>The idea behind Notes Central is simple: every subject gets a home, every resource is one search away, and the things you care about are waiting for you when you come back.</p>
+            <p>Instead of another folder of files, it’s a connected learning space. You can <strong>explore</strong> by subject and topic, <strong>read</strong> in a reader designed for revision, and <strong>keep</strong> your own library of saved notes and reading history.</p>
+            <p class="pull-quote">Your knowledge deserves a better home.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--surface" aria-labelledby="problem-title">
+        <div class="container story">
+          <div data-reveal>
+            <span class="eyebrow">The problem</span>
+            <h2 id="problem-title">Notes are everywhere, except where you need them</h2>
+          </div>
+          <div class="story-text" data-reveal="late">
+            <p>Before every exam the same question comes up: <em>“Does anyone have the notes?”</em> Material ends up scattered across group chats, drives and phone photos, with no way to search it and no way to tell what exists.</p>
+            <p>Notes Central fixes that by organising notes by year and subject, making them searchable by name or short form, and presenting them in a format that’s comfortable to read on any device, including a phone on the way to an exam.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="core-title">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <span class="eyebrow">Core functionality</span>
+              <h2 id="core-title">What it does</h2>
+            </div>
+          </div>
+          <ul class="pillars list-reset">
+            <li class="pillar"><span class="pillar-num" aria-hidden="true">01</span><h3>Smart resource explorer</h3><p>Search titles, subjects, topics and short forms; filter by subject, type and category; sort; share any view by link.</p></li>
+            <li class="pillar"><span class="pillar-num" aria-hidden="true">02</span><h3>A reader for revision</h3><p>Table of contents, reading progress, adjustable text size, reveal-one-at-a-time practice questions, download and print.</p></li>
+            <li class="pillar"><span class="pillar-num" aria-hidden="true">03</span><h3>Your personal library</h3><p>Bookmarks, recently viewed resources and favourite subjects, saved instantly on your device.</p></li>
+            <li class="pillar"><span class="pillar-num" aria-hidden="true">04</span><h3>Accounts that sync</h3><p>Sign in and your library is stored with your account, so it follows you between devices.</p></li>
+            <li class="pillar"><span class="pillar-num" aria-hidden="true">05</span><h3>Quick find</h3><p>A keyboard-first command palette on every page, opened with <kbd>/</kbd> or <kbd>Ctrl</kbd><kbd>K</kbd>.</p></li>
+            <li class="pillar"><span class="pillar-num" aria-hidden="true">06</span><h3>Light and dark themes</h3><p>Two complete colour themes, each checked for contrast, that follow your system until you choose.</p></li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section section--surface" aria-labelledby="eng-title">
+        <div class="container story">
+          <div data-reveal>
+            <span class="eyebrow">Technology &amp; engineering</span>
+            <h2 id="eng-title">Fast, framework-free, and built to last</h2>
+          </div>
+          <div class="story-text" data-reveal="late">
+            <p>The frontend is semantic HTML, a single CSS design system built on custom properties, and small vanilla JavaScript modules, with no frameworks and no build step required to run it. Resources are described in a JSON catalogue and written in Markdown, which the reader renders safely in the browser.</p>
+            <p>Accounts and library sync run on a Node.js and Express API backed by MySQL, with passwords hashed using bcrypt, JSON Web Tokens for sessions, server-side input validation, and secrets kept in environment variables.</p>
+            <ul class="stack list-reset" aria-label="Technology stack">
+              <li>HTML5</li><li>CSS custom properties</li><li>Vanilla JavaScript (ES modules)</li><li>Node.js</li><li>Express</li><li>MySQL</li><li>JWT &amp; bcrypt</li><li>Python &amp; Flask</li><li>Formspree</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="quality-title">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <span class="eyebrow">Quality</span>
+              <h2 id="quality-title">Designed for everyone, on every screen</h2>
+            </div>
+          </div>
+          <ul class="pillars list-reset">
+            <li class="pillar"><h3>Accessibility</h3><p>Built to WCAG 2.0 AA: semantic structure, a skip link, full keyboard support, visible focus, labelled forms with clear errors, sufficient contrast in both themes, and reduced-motion support.</p></li>
+            <li class="pillar"><h3>Responsive design</h3><p>Mobile-first layouts tested from 320px phones to 1920px displays, with fluid type, adaptive grids and touch-friendly controls, and no horizontal scrolling.</p></li>
+            <li class="pillar"><h3>User experience</h3><p>Helpful empty states, loading skeletons, recoverable errors and subtle motion that explains what changed, without getting in the way.</p></li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section section--tight" aria-labelledby="about-cta-title">
+        <div class="container">
+          <div class="empty">
+            <h2 id="about-cta-title">See it for yourself</h2>
+            <p>Open the library, or get in touch to request a subject or share feedback.</p>
+            <div class="actions">
+              <a class="btn btn-primary" href="notess.html">Explore resources</a>
+              <a class="btn btn-ghost" href="contact.html">Get in touch</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-top">
+          <div>
+            <a class="brand" href="index.html">
+              <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><rect class="bm-cover" x="6" y="3" width="21" height="26" rx="3.5"/><rect class="bm-spine" x="6" y="3" width="5" height="26" rx="2"/><path class="bm-lines" d="M14.5 11h8M14.5 16h8M14.5 21h5"/><path class="bm-hl" d="M13.5 16h10"/></svg>
+              <span class="brand-word">Notes <i>Central</i></span>
+            </a>
+            <p class="footer-tagline">Your knowledge deserves a better home.</p>
+          </div>
+          <div class="footer-cols">
+            <nav aria-labelledby="footer-product">
+              <h2 id="footer-product">Product</h2>
+              <ul class="footer-links">
+                <li><a href="notess.html">Explore resources</a></li>
+                <li><a href="subjects.html">Subjects</a></li>
+                <li><a href="dashboard.html">Your library</a></li>
+              </ul>
+            </nav>
+            <nav aria-labelledby="footer-years">
+              <h2 id="footer-years">By year</h2>
+              <ul class="footer-links">
+                <li><a href="subjects.html#year-1">1st year</a></li>
+                <li><a href="subjects.html#year-2">2nd year</a></li>
+                <li><a href="subjects.html#year-3">3rd year</a></li>
+              </ul>
+            </nav>
+            <nav aria-labelledby="footer-company">
+              <h2 id="footer-company">Notes Central</h2>
+              <ul class="footer-links">
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Sign in</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 Notes Central. All rights reserved.</p>
+          <p>Independently designed and developed.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="js/script.js"></script>
+  </body>
+</html>

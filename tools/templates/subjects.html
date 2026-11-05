@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+{{HEAD}}
+    <title>Subjects — Notes Central</title>
+    <meta name="description" content="Browse every Notes Central subject by year. {{N_SUBJECTS}} subjects are available now, with 1st and 3rd year on the way.">
+  </head>
+
+  <body data-page="subjects">
+{{HEADER}}
+
+    <main id="main" tabindex="-1">
+      <div class="page-intro">
+        <div class="container">
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <ol>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="subjects.html" aria-current="page">Subjects</a></li>
+            </ol>
+          </nav>
+          <h1>Every subject, on one&nbsp;shelf</h1>
+          <p class="lede">Each subject is a notebook of notes, revision sheets and practice sets. Star the ones you’re studying this semester and they’ll stay one tap away in your library.</p>
+          <nav class="year-jump" aria-label="Jump to year">
+            <ul class="chip-row list-reset">
+              <li><a class="chip" href="#year-2">2nd year <span class="count">Available</span></a></li>
+              <li><a class="chip" href="#year-1">1st year <span class="count">Coming soon</span></a></li>
+              <li><a class="chip" href="#year-3">3rd year <span class="count">Coming soon</span></a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="container">
+          <section class="year-block" id="year-2" aria-labelledby="year-2-title">
+            <div class="year-head">
+              <h2 id="year-2-title">2nd year</h2>
+              <p id="year-2-summary">{{N_SUBJECTS}} subjects · {{N_RESOURCES}} resources</p>
+            </div>
+            <ul class="notebook-grid list-reset" id="subject-grid" aria-busy="true">
+              <li><div class="skeleton skeleton-notebook"></div></li>
+              <li><div class="skeleton skeleton-notebook"></div></li>
+              <li><div class="skeleton skeleton-notebook"></div></li>
+            </ul>
+            <noscript>
+              <ul class="chip-row list-reset">
+{{SUBJECT_CHIPS}}
+              </ul>
+            </noscript>
+          </section>
+
+          <section class="year-block" id="year-1" aria-labelledby="year-1-title">
+            <div class="year-head">
+              <h2 id="year-1-title">1st year</h2>
+              <span class="tag tag--soon">Coming soon</span>
+            </div>
+            <div class="notebook-grid">
+              <article class="notebook notebook--soon">
+                <span class="monogram" aria-hidden="true">01</span>
+                <h3>First-year subjects</h3>
+                <p>Notes for the first year are being prepared. Tell us which subjects you need first.</p>
+                <div class="notebook-meta"><a class="text-link" href="contact.html?subject=1st%20year">Request 1st year notes</a></div>
+              </article>
+            </div>
+          </section>
+
+          <section class="year-block" id="year-3" aria-labelledby="year-3-title">
+            <div class="year-head">
+              <h2 id="year-3-title">3rd year</h2>
+              <span class="tag tag--soon">Coming soon</span>
+            </div>
+            <div class="notebook-grid">
+              <article class="notebook notebook--soon">
+                <span class="monogram" aria-hidden="true">03</span>
+                <h3>Third-year subjects</h3>
+                <p>Third-year notes are on the way. Requests help decide what comes first.</p>
+                <div class="notebook-meta"><a class="text-link" href="contact.html?subject=3rd%20year">Request 3rd year notes</a></div>
+              </article>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+
+{{FOOTER}}
+
+    <script type="module" src="js/script.js"></script>
+  </body>
+</html>

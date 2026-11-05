@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+{{HEAD}}
+    <link rel="stylesheet" href="css/loginstyle.css">
+    <title>Sign in or create an account — Notes Central</title>
+    <meta name="description" content="Sign in to Notes Central to sync your saved resources, reading history and favourite subjects across devices.">
+  </head>
+
+  <body data-page="login">
+{{HEADER}}
+
+    <main id="main" tabindex="-1" class="auth-page">
+      <div class="container auth-layout">
+        <div class="auth-card">
+          <h1>Welcome to Notes Central</h1>
+          <p class="auth-card-intro">Sign in to sync your library across devices, or create an account if you’re new here. Reading never requires an account.</p>
+
+          <noscript>
+            <p class="form-status form-status--info">Signing in requires JavaScript. Please enable it in your browser settings.</p>
+          </noscript>
+
+          <div class="auth-tabs" role="tablist" aria-label="Account options">
+            <button class="auth-tab" type="button" role="tab" id="tab-signin" aria-selected="true" aria-controls="panel-signin">Sign in</button>
+            <button class="auth-tab" type="button" role="tab" id="tab-signup" aria-selected="false" aria-controls="panel-signup" tabindex="-1" data-hash="signup">Create account</button>
+          </div>
+
+          <div class="auth-panel" role="tabpanel" id="panel-signin" aria-labelledby="tab-signin">
+            <form class="form sign-in-form" id="signin-form">
+              <div class="form-status" id="signin-status" role="status"></div>
+              <div class="field">
+                <label for="signin-email">Email address</label>
+                <input class="input" id="signin-email" name="email" type="email" autocomplete="email" required data-label="email address" aria-describedby="signin-email-error">
+                <p class="field-error" id="signin-email-error"></p>
+              </div>
+              <div class="field">
+                <label for="signin-password">Password</label>
+                <div class="password-field">
+                  <input class="input" id="signin-password" name="password" type="password" autocomplete="current-password" required data-label="password" aria-describedby="signin-password-error">
+                  <button class="password-toggle" type="button" aria-controls="signin-password">Show<span class="sr-only"> password</span></button>
+                </div>
+                <p class="field-error" id="signin-password-error"></p>
+              </div>
+              <button class="btn btn-primary btn-lg btn-block" type="submit">Sign in</button>
+            </form>
+            <p class="auth-switch">New here? <button class="link-button" type="button" data-switch-to="tab-signup">Create an account</button></p>
+          </div>
+
+          <div class="auth-panel" role="tabpanel" id="panel-signup" aria-labelledby="tab-signup" hidden>
+            <form class="form sign-up-form" id="signup-form">
+              <div class="form-status" id="signup-status" role="status"></div>
+              <div class="field">
+                <label for="signup-username">Username</label>
+                <input class="input" id="signup-username" name="username" type="text" autocomplete="username" autocapitalize="none" spellcheck="false" required maxlength="50" pattern="[A-Za-z0-9]+" title="Your username can only contain letters and numbers." data-label="username" aria-describedby="signup-username-hint signup-username-error">
+                <p class="field-hint" id="signup-username-hint">Letters and numbers only.</p>
+                <p class="field-error" id="signup-username-error"></p>
+              </div>
+              <div class="field">
+                <label for="signup-email">Email address</label>
+                <input class="input" id="signup-email" name="email" type="email" autocomplete="email" required maxlength="254" data-label="email address" aria-describedby="signup-email-error">
+                <p class="field-error" id="signup-email-error"></p>
+              </div>
+              <div class="field">
+                <label for="signup-password">Password</label>
+                <div class="password-field">
+                  <input class="input" id="signup-password" name="password" type="password" autocomplete="new-password" required maxlength="200" data-label="password" aria-describedby="signup-password-hint signup-password-error">
+                  <button class="password-toggle" type="button" aria-controls="signup-password">Show<span class="sr-only"> password</span></button>
+                </div>
+                <p class="field-hint" id="signup-password-hint">Choose a strong password you don’t use anywhere else.</p>
+                <p class="field-error" id="signup-password-error"></p>
+              </div>
+              <button class="btn btn-primary btn-lg btn-block" type="submit">Create account</button>
+            </form>
+            <p class="auth-switch">Already have an account? <button class="link-button" type="button" data-switch-to="tab-signin">Sign in</button></p>
+          </div>
+        </div>
+
+        <aside class="auth-aside" aria-labelledby="auth-aside-title">
+          <div class="auth-aside-art" aria-hidden="true">
+            <span class="aa-card hue-teal"><b>DS</b>Trees &amp; Graphs</span>
+            <span class="aa-card hue-blue"><b>OS</b>Memory Management</span>
+            <span class="aa-card hue-violet"><b>DSTL</b>Propositional Logic</span>
+          </div>
+          <h2 class="display" id="auth-aside-title">Your library, on every device</h2>
+          <ul class="auth-aside-list">
+            <li>Saved resources follow you from phone to laptop</li>
+            <li>Pick up reading exactly where you left off</li>
+            <li>Keep your favourite subjects one tap away</li>
+          </ul>
+        </aside>
+      </div>
+    </main>
+
+{{FOOTER}}
+
+    <script type="module" src="js/script.js"></script>
+    <script type="module" src="js/login.js"></script>
+    <script type="module" src="js/notesscript.js"></script>
+  </body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+{{HEAD}}
+    <title>Contact — Notes Central</title>
+    <meta name="description" content="Get in touch with Notes Central to request notes for a subject, contribute your own notes or report a problem.">
+  </head>
+
+  <body data-page="contact">
+{{HEADER}}
+
+    <main id="main" tabindex="-1">
+      <div class="page-intro">
+        <div class="container">
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <ol>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="contact.html" aria-current="page">Contact</a></li>
+            </ol>
+          </nav>
+          <h1>Get in touch</h1>
+          <p class="lede">Request notes for a subject, share your own, or report a problem. Every message is read.</p>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="container contact-layout">
+          <div class="form-card">
+            <h2 id="contact-form-title">Send a message</h2>
+            <p class="form-card-intro">Fields marked <span aria-hidden="true">*</span><span class="sr-only">with an asterisk</span> are required.</p>
+
+            <!-- Submits to Formspree. newscript.js adds inline validation and an
+                 in-page submission; without JavaScript it posts normally. -->
+            <form class="form" id="contact-form" action="https://formspree.io/f/xeoorjjz" method="POST" aria-labelledby="contact-form-title">
+              <div class="form-status" id="contact-status" role="status"></div>
+
+              <div class="field">
+                <label for="contact-name">Your name <span class="optional">(optional)</span></label>
+                <input class="input" id="contact-name" name="name" type="text" autocomplete="name" maxlength="100">
+              </div>
+
+              <div class="field">
+                <label for="contact-email">Your email <span aria-hidden="true">*</span></label>
+                <input class="input" id="contact-email" name="email" type="email" autocomplete="email" required data-label="email address" aria-describedby="contact-email-hint contact-email-error">
+                <p class="field-hint" id="contact-email-hint">Only used to reply to your message.</p>
+                <p class="field-error" id="contact-email-error"></p>
+              </div>
+
+              <div class="field">
+                <label for="contact-topic">What is this about?</label>
+                <select class="input" id="contact-topic" name="topic">
+                  <option>Request notes for a subject</option>
+                  <option>Contribute my notes</option>
+                  <option>Report a problem</option>
+                  <option>Something else</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="contact-message">Your message <span aria-hidden="true">*</span></label>
+                <textarea class="input" id="contact-message" name="message" rows="6" required maxlength="4000" data-label="message" aria-describedby="contact-message-error"></textarea>
+                <p class="field-error" id="contact-message-error"></p>
+              </div>
+
+              <!-- Spam honeypot recognised by Formspree; hidden from everyone -->
+              <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" hidden>
+
+              <button class="btn btn-primary btn-lg btn-block" type="submit">Send message</button>
+            </form>
+          </div>
+
+          <aside aria-labelledby="help-title">
+            <span class="eyebrow">Ways to help</span>
+            <h2 class="display contact-aside-title" id="help-title">What you can get in touch about</h2>
+            <ul class="topic-list list-reset">
+              <li>
+                <span class="topic-icon" aria-hidden="true">{{ICON:book}}</span>
+                <div><h3>Request notes</h3><p>Share the subject and year so it can be prioritised.</p></div>
+              </li>
+              <li>
+                <span class="topic-icon" aria-hidden="true">{{ICON:plus}}</span>
+                <div><h3>Contribute notes</h3><p>Share notes you’ve written so other students can benefit too.</p></div>
+              </li>
+              <li>
+                <span class="topic-icon" aria-hidden="true">{{ICON:alert}}</span>
+                <div><h3>Report a problem</h3><p>Spotted a mistake or a broken link? Report it so it can be fixed.</p></div>
+              </li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </main>
+
+{{FOOTER}}
+
+    <script type="module" src="js/script.js"></script>
+    <script type="module" src="js/newscript.js"></script>
+  </body>
+</html>

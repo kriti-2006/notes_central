@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+{{HEAD}}
+    <title>About — Notes Central</title>
+    <meta name="description" content="Notes Central is an independently developed educational platform created to make academic resources easier to discover, access, and navigate.">
+  </head>
+
+  <body data-page="about">
+{{HEADER}}
+
+    <main id="main" tabindex="-1">
+      <div class="page-intro">
+        <div class="container">
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <ol>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html" aria-current="page">About</a></li>
+            </ol>
+          </nav>
+          <h1>A better home for what you learn</h1>
+          <p class="lede">Notes Central is an independently developed educational platform created to make academic resources easier to discover, access, and navigate.</p>
+        </div>
+      </div>
+
+      <section class="section" aria-labelledby="vision-title">
+        <div class="container story">
+          <div data-reveal>
+            <span class="eyebrow">Product vision</span>
+            <h2 id="vision-title">Study material should feel like a library, not a scavenger hunt</h2>
+          </div>
+          <div class="story-text" data-reveal="late">
+            <p>The idea behind Notes Central is simple: every subject gets a home, every resource is one search away, and the things you care about are waiting for you when you come back.</p>
+            <p>Instead of another folder of files, it’s a connected learning space. You can <strong>explore</strong> by subject and topic, <strong>read</strong> in a reader designed for revision, and <strong>keep</strong> your own library of saved notes and reading history.</p>
+            <p class="pull-quote">Your knowledge deserves a better home.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--surface" aria-labelledby="problem-title">
+        <div class="container story">
+          <div data-reveal>
+            <span class="eyebrow">The problem</span>
+            <h2 id="problem-title">Notes are everywhere, except where you need them</h2>
+          </div>
+          <div class="story-text" data-reveal="late">
+            <p>Before every exam the same question comes up: <em>“Does anyone have the notes?”</em> Material ends up scattered across group chats, drives and phone photos, with no way to search it and no way to tell what exists.</p>
+            <p>Notes Central fixes that by organising notes by year and subject, making them searchable by name or short form, and presenting them in a format that’s comfortable to read on any device, including a phone on the way to an exam.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="core-title">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <span class="eyebrow">Core functionality</span>
+              <h2 id="core-title">What it does</h2>
+            </div>
+          </div>
+          <ul class="pillars list-reset">
+            <li class="pillar"><span class="pillar-num" aria-hidden="true">01</span><h3>Smart resource explorer</h3><p>Search titles, subjects, topics and short forms; filter by subject, type and category; sort; share any view by link.</p></li>
+            <li class="pillar"><span class="pillar-num" aria-hidden="true">02</span><h3>A reader for revision</h3><p>Table of contents, reading progress, adjustable text size, reveal-one-at-a-time practice questions, download and print.</p></li>
+            <li class="pillar"><span class="pillar-num" aria-hidden="true">03</span><h3>Your personal library</h3><p>Bookmarks, recently viewed resources and favourite subjects, saved instantly on your device.</p></li>
+            <li class="pillar"><span class="pillar-num" aria-hidden="true">04</span><h3>Accounts that sync</h3><p>Sign in and your library is stored with your account, so it follows you between devices.</p></li>
+            <li class="pillar"><span class="pillar-num" aria-hidden="true">05</span><h3>Quick find</h3><p>A keyboard-first command palette on every page, opened with <kbd>/</kbd> or <kbd>Ctrl</kbd><kbd>K</kbd>.</p></li>
+            <li class="pillar"><span class="pillar-num" aria-hidden="true">06</span><h3>Light and dark themes</h3><p>Two complete colour themes, each checked for contrast, that follow your system until you choose.</p></li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section section--surface" aria-labelledby="eng-title">
+        <div class="container story">
+          <div data-reveal>
+            <span class="eyebrow">Technology &amp; engineering</span>
+            <h2 id="eng-title">Fast, framework-free, and built to last</h2>
+          </div>
+          <div class="story-text" data-reveal="late">
+            <p>The frontend is semantic HTML, a single CSS design system built on custom properties, and small vanilla JavaScript modules, with no frameworks and no build step required to run it. Resources are described in a JSON catalogue and written in Markdown, which the reader renders safely in the browser.</p>
+            <p>Accounts and library sync run on a Node.js and Express API backed by MySQL, with passwords hashed using bcrypt, JSON Web Tokens for sessions, server-side input validation, and secrets kept in environment variables.</p>
+            <ul class="stack list-reset" aria-label="Technology stack">
+              <li>HTML5</li><li>CSS custom properties</li><li>Vanilla JavaScript (ES modules)</li><li>Node.js</li><li>Express</li><li>MySQL</li><li>JWT &amp; bcrypt</li><li>Python &amp; Flask</li><li>Formspree</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="quality-title">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <span class="eyebrow">Quality</span>
+              <h2 id="quality-title">Designed for everyone, on every screen</h2>
+            </div>
+          </div>
+          <ul class="pillars list-reset">
+            <li class="pillar"><h3>Accessibility</h3><p>Built to WCAG 2.0 AA: semantic structure, a skip link, full keyboard support, visible focus, labelled forms with clear errors, sufficient contrast in both themes, and reduced-motion support.</p></li>
+            <li class="pillar"><h3>Responsive design</h3><p>Mobile-first layouts tested from 320px phones to 1920px displays, with fluid type, adaptive grids and touch-friendly controls, and no horizontal scrolling.</p></li>
+            <li class="pillar"><h3>User experience</h3><p>Helpful empty states, loading skeletons, recoverable errors and subtle motion that explains what changed, without getting in the way.</p></li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section section--tight" aria-labelledby="about-cta-title">
+        <div class="container">
+          <div class="empty">
+            <h2 id="about-cta-title">See it for yourself</h2>
+            <p>Open the library, or get in touch to request a subject or share feedback.</p>
+            <div class="actions">
+              <a class="btn btn-primary" href="notess.html">Explore resources</a>
+              <a class="btn btn-ghost" href="contact.html">Get in touch</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+{{FOOTER}}
+
+    <script type="module" src="js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+{{HEAD}}
+    <title>Reader — Notes Central</title>
+    <meta name="description" content="Read Notes Central study notes with a table of contents, adjustable text size, bookmarks, download and print.">
+  </head>
+
+  <body data-page="viewer">
+    <div class="reading-progress" aria-hidden="true"></div>
+{{HEADER}}
+
+    <main id="main" tabindex="-1">
+      <div class="reader-head">
+        <div class="container">
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <ol>
+              <li><a href="notess.html">Explore</a></li>
+              <li id="crumb-subject" hidden></li>
+              <li><a href="#main" id="crumb-title" aria-current="page">Loading…</a></li>
+            </ol>
+          </nav>
+          <div id="reader-head">
+            <div class="skeleton reader-skeleton" aria-hidden="true"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container reader-layout" id="reader-layout" hidden>
+        <div>
+          <div class="toc-mobile" id="toc-mobile" hidden></div>
+          <div id="reader-body"></div>
+          <noscript><p class="muted">The reader needs JavaScript. Each note is also available as a Markdown file in the project’s <code>notes</code> folder.</p></noscript>
+        </div>
+        <aside class="toc-desktop" id="toc-desktop" hidden></aside>
+      </div>
+
+      <section class="related" id="related" aria-label="Related resources" hidden></section>
+    </main>
+
+{{FOOTER}}
+
+    <script type="module" src="js/script.js"></script>
+  </body>
+</html>
